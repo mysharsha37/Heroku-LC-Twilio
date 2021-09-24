@@ -21,7 +21,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://mc-ca-twilio.herokuapp.com/journeybuilder/execute",
+            "url": "https://new-jb-try.herokuapp.com/journeybuilder/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -30,9 +30,9 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "36c2df6d-a20f-4374-8d98-80f729422279",
+      "applicationExtensionKey": "6ea7905b-40cf-4ebf-8aa1-d9c6d7f781dc",
        "save": {
-           "url": "https://mc-ca-twilio.herokuapp.com/save",
+           "url": "https://new-jb-try.herokuapp.com/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -41,7 +41,7 @@
        },
         
        "publish": {
-           "url": "https://mc-ca-twilio.herokuapp.com/publish",
+           "url": "https://new-jb-try.herokuapp.com/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -49,7 +49,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": "https://mc-ca-twilio.herokuapp.com/validate",
+           "url": "https://new-jb-try.herokuapp.com/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -57,7 +57,7 @@
             "timeout": 2000
        },
        "stop": {
-           "url": "https://mc-ca-twilio.herokuapp.com/stop",
+           "url": "https://new-jb-try.herokuapp.com/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
