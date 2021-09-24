@@ -1,0 +1,129 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+       "icon": "images/iconSmall.png",
+       "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+       "en-US": {
+           "name": "Twilio SMS",
+           "description": "Send Twilio SMS with Journey Builder",
+           "TwilioMessage":"test"
+       }
+    },
+    "arguments": {
+        "execute": {
+            "inArguments": [
+                {
+                  "email": "{{Contact.Default.EmailAddress}}",
+                  "to": "{{Contact.Attribute.CustomActivityTwilio.Contact}}" 
+                }               
+            ],
+            "outArguments": [],
+            "url": "https://mc-ca-twilio.herokuapp.com/journeybuilder/execute",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+        }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "36c2df6d-a20f-4374-8d98-80f729422279",
+       "save": {
+           "url": "https://mc-ca-twilio.herokuapp.com/save",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+       },
+        
+       "publish": {
+           "url": "https://mc-ca-twilio.herokuapp.com/publish",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+       },
+       "validate": {
+           "url": "https://mc-ca-twilio.herokuapp.com/validate",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+       },
+       "stop": {
+           "url": "https://mc-ca-twilio.herokuapp.com/stop",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
+       }
+    },
+    "wizardSteps": [
+       { "label": "Create SMS Message", "key": "step1" }
+    ],
+    "userInterfaces": {
+       "configModal": {
+           "height": 600,
+           "width": 800,
+           "fullscreen": false
+       }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [
+                    {
+                        "accountSid": {
+                            "dataType": "String",
+                            "isNullable": false,
+                            "direction": "out"   
+                        }
+                    },                    
+                    {
+                        "authToken": {
+                            "dataType": "String",
+                            "isNullable": false,
+                            "direction": "out"   
+                        }
+                    },                    
+                    {
+                        "from": {
+                            "dataType": "Phone",
+                            "isNullable": true,
+                            "direction": "out"   
+                        }
+                    },                    
+                    {
+                        "to": {
+                            "dataType": "Phone",
+                            "isNullable": false,
+                            "direction": "out"   
+                        }
+                    },
+                    {
+                        "body": {
+                            "dataType": "String",
+                            "isNullable": false,
+                            "direction": "out"   
+                        }
+                    },                    
+                    {
+                        "email": {
+                            "dataType": "Email",
+                            "isNullable": true,
+                            "direction": "out"
+                        }
+                    }
+                ],
+                "outArguments": []
+            }
+        }
+    }
+}
